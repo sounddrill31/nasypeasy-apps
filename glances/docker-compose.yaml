@@ -1,0 +1,11 @@
+services:
+  glances:
+    image: docker.io/nicolargo/glances:latest
+    container_name: nasypeasy-glances
+    ports:
+      - "61208:61208"
+    pid: host
+    privileged: true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    restart: unless-stopped
