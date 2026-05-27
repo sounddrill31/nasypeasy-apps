@@ -3,7 +3,7 @@ services:
     image: docker.io/sissbruecker/linkding:latest
     container_name: nasypeasy-linkding
     ports:
-      - "9090:9090"
+      - "9091:9090"
     volumes:
       - linkding-data:/etc/linkding/data
     restart: unless-stopped
