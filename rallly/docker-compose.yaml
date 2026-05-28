@@ -1,0 +1,15 @@
+services:
+  rallly:
+    image: lukevella/rallly:latest
+    container_name: nasypeasy-rallly
+    ports:
+      - "3000:3000"
+    volumes:
+      - rallly-data:/data
+    environment:
+      - SECRET_PASSWORD=changethisplease
+      - NEXT_PUBLIC_APP_URL=${PUBLIC_URL}
+    restart: unless-stopped
+
+volumes:
+  rallly-data:
